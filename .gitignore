@@ -1,0 +1,16 @@
+# Dependency folders
+/node_modules
+
+# Environment Variables and API Keys (CRUCIAL FOR SECURITY)
+.env
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database (MongoDB) data and lock files (if you run MongoDB inside the project)
+/data
+/db
+*.lock
