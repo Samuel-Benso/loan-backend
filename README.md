@@ -222,13 +222,13 @@ curl -X DELETE http://localhost:3000/loans/123abc
 
 ## Key Features
 
-✅ **RESTful API Design** - Follows REST conventions for CRUD operations  
-✅ **Error Handling** - Comprehensive try-catch blocks with meaningful error messages  
-✅ **Status Codes** - Proper HTTP status codes (200, 201, 404, 500)  
-✅ **Search Functionality** - Query loans by applicant name  
-✅ **Database Integration** - MongoDB with Mongoose ODM  
-✅ **Middleware Stack** - Request logging and JSON parsing  
-✅ **Environment Configuration** - Secure configuration via .env
+- **RESTful API Design** - Follows REST conventions for CRUD operations
+- **Error Handling** - Comprehensive try-catch blocks with meaningful error messages
+- **Status Codes** - Proper HTTP status codes (200, 201, 404, 500)
+- **Search Functionality** - Query loans by applicant name
+- **Database Integration** - MongoDB with Mongoose ODM
+- **Middleware Stack** - Request logging and JSON parsing
+- **Environment Configuration** - Secure configuration via .env
 
 ## Response Format
 
