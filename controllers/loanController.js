@@ -77,25 +77,27 @@ exports.deleteLoan = async (req, res) => {
   }
 };
 
-// 6. GET one loan by Name (via query parameter)
+// 6. GET loans by Name (via query parameter)
 exports.searchLoanByName = async (req, res) => {
   try {
-    // Get the 'name' from the URL query string (e.g., ?name=John)
+    // 1. Get the 'name' from the URL query string (e.g., ?name=John)
     const { name } = req.query; 
 
     if (!name) {
       return res.status(400).json({ message: "Name query parameter is required for search." });
     }
 
-    // Use findOne() to find the first matching document
-    const item = await LoanModel.findOne({ name: name }); 
+    // 🌟 CHANGE: Use find() instead of findOne() to return all matches
+    // This makes the search safer and more complete.
+    const items = await LoanModel.find({ name: name }); 
 
-    if (!item) {
-      // If Mongoose returns null, the loan was not found
-      return res.status(404).json({ message: "Loan not found with that name." });
+    if (items.length === 0) {
+      // If the array is empty, no loans were found
+      return res.status(404).json({ message: "No loans found with that name." });
     }
 
-    res.status(200).json(item);
+    // 2. Return the array of all matching loans
+    res.status(200).json(items);
 
   } catch (err) {
     res.status(500).json({ message: err.message });
