@@ -304,8 +304,6 @@ If you'd like, I can also:
 
 Tell me which of those extras you'd like and I'll add them.
 
-# Loan Backend API
-
 A RESTful Node.js backend API for managing loan records with MongoDB database integration. This project demonstrates modern Express.js architecture with proper separation of concerns using controllers, models, and routes.
 
 ## Project Overview
